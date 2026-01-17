@@ -1,0 +1,77 @@
+Mob  - +91-9915507538
+RAUSHAN CHAUDHARY                                                     Email - raushanc107@icloud.com
+                	GitHub - github.com/raushanc107
+
+SUMMARY 
+A meticulous software engineer with 5.5 years of experience in software development, seeking to leverage technical expertise in application development and design. Eager to work in a collaborative environment where peers inspire and support each other to achieve shared objectives.
+
+WORK EXPERIENCE 
+A detail-oriented software engineer with experience in the Software Development Lifecycle. Currently working at Magic Software Private LTD, specializing in Azure cloud optimization and cost-saving tools, leveraging technologies like C#, .NET MVC, Angular, TypeScript, and Azure OpenAI. Skilled in building scalable .NET MVC applications over REST APIs using C#, MVC, and the .NET framework, with hands-on experience in developing dynamic front-end applications using Angular and TypeScript.
+Worked on AiMasterClass projects, developing multiple POCs for clients by utilizing Azure Cognitive Services to deliver AI-driven solutions aimed at reducing manual effort. Solutions include a RAG-based chatbot, sentiment analysis, key phrase extraction, and document translation. Technical expertise includes C#, MVC, DotNET framework, HTML, CSS, JavaScript, SQL Server,Typescript , Angular and a variety of Azure services.
+    Sr. Software Engineer                                             Software Developer Engineer            
+    Magic Software                                                        UnifyCloud Pvt Ltd.
+    10/2024 – present                                                    04/2022 – 09/2024
+    Software Developer Engineer                              Student Intern
+    Persistent Systems Pvt Ltd.                                   Persistent Systems Pvt Ltd.
+    08/2020 – 04/2022                                                  01/2020 – 07/2020
+
+PROJECTS 
+    NextGen VATI:
+Built a responsive learning platform that delivers personalised learning paths tailored to each student’s proficiency. Unlike traditional systems where the same set of courses is shared with all students, NextGen VATI dynamically customises course content and progression, ensuring every learner receives a unique and effective educational experience aligned with their skill level.
+
+    RAG Based Chat Bot:
+Developed a chatbot similar to ChatGPT in terms of UI and functionality, addressing its limitations regarding enterprise knowledge. This chatbot not only responds to general questions but also accesses information from various knowledge sources, such as enterprise databases and files, for more comprehensive answers.    
+
+    Document Translator Tool :
+Developed a custom application that automates the translation of documents into multiple languages using AI-powered services. The tool allows clients to add their custom glossary, ensuring tailored and accurate translations according to specific terminology. It supports various document formats and significantly reduces manual translation effort.
+
+    DataPrism
+Contributed to the architecture design and developed the code framework for this company product, enabling the team to collaborate efficiently. The project focuses on processing unstructured data for use in LLM knowledge models by converting it into vector embeddings. The application accesses any type of file, extracts and cleans the content, chunks it, and embeds it, automatically inserting the processed data into the user’s desired output source.
+	  
+     CloudSupervisor
+A tool used by companies with existing Azure infrastructure to optimize their cloud cost spending. The application collects data from Azure, applies algorithms and analysis, and provides actionable insights to help reduce costs by identifying underutilized services and offering recommendations for optimization.
+
+      Technologies Used:
+Backend: C#, MVC, .NET Framework, SignalR
+Frontend: HTML, CSS, JavaScript, Typescript, Angular 
+Database: SQL Server
+Azure Services: Storage Account, App Service, Azure SQL, Azure AI Search, Multi-Service Account, Azure OpenAI
+
+       TECHNICAL SKILLS 
+
+Net Framework
+C#
+JavaScript
+Design and Development
+SQL
+OOPS
+Git
+Typescript
+
+MVC
+Azure
+Entity Framework
+DSA
+Data Structure & algorithm
+HTML
+CSS
+Angular
+
+EDUCATION 
+
+Bachelor of Engineering, Computer Science, Chandigarh University
+
+12th, CBSE
+Holy Cross Public School, Muzaffarpur, Bihar
+
+July 2016 – June 2020
+8.3 CGPA
+
+Mar 2014 – Mar 2016
+64.5 %
+
+ACCOMPLISHMENTS 
+
+Rewarded High Five Individual Award in Persistent Systems Ltd.
+5 star in Problem-Solving on Hackerrank Awarded
+94 percentile in National Programming Aptitude Test
