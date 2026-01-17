@@ -70,13 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dynamic Header Background
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(15, 15, 18, 0.8)';
-            header.style.backdropFilter = 'blur(20px)';
-        } else {
-            header.style.background = 'transparent';
-            header.style.backdropFilter = 'none';
-        }
+        header.classList.toggle('scrolled', window.scrollY > 50);
     });
 
     // Typing Effect Logic (Simple version)

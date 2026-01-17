@@ -18,6 +18,16 @@
     --glass-border: rgba(255, 255, 255, 0.08);
     --glass-highlight: rgba(255, 255, 255, 0.1);
 
+    /* Component Colors (Default Dark) */
+    --nav-bg: rgba(15, 15, 18, 0.6);
+    --tag-bg: rgba(255, 255, 255, 0.05);
+    --input-bg: rgba(255, 255, 255, 0.03);
+    --input-bg-focus: rgba(255, 255, 255, 0.05);
+    --contact-info-bg: rgba(255, 255, 255, 0.01);
+    --timeline-dot-bg: #1e1e24;
+    --input-text: #ffffff;
+    --header-scroll-bg: rgba(15, 15, 18, 0.8);
+
     /* Gradients */
     --gradient-main: linear-gradient(135deg, var(--primary), var(--secondary));
     --gradient-text: linear-gradient(to right, #c084fc, #6366f1);
@@ -33,6 +43,38 @@
     /* Transition */
     --transition-fast: 0.3s ease;
     --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Light Theme Overrides */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-dark: #f8fafc;
+        /* Light Slate BG */
+        --bg-darker: #f1f5f9;
+        --text-main: #1e293b;
+        /* Slate 800 */
+        --text-muted: #64748b;
+        /* Slate 500 */
+
+        /* Glass Effect Inversion */
+        --glass-bg: rgba(15, 23, 42, 0.03);
+        --glass-border: rgba(15, 23, 42, 0.08);
+        --glass-highlight: rgba(15, 23, 42, 0.05);
+
+        /* Components */
+        --nav-bg: rgba(255, 255, 255, 0.7);
+        --tag-bg: rgba(15, 23, 42, 0.05);
+        --input-bg: rgba(15, 23, 42, 0.03);
+        --input-bg-focus: rgba(15, 23, 42, 0.05);
+        --contact-info-bg: rgba(15, 23, 42, 0.02);
+        --timeline-dot-bg: #e2e8f0;
+        --input-text: #1e293b;
+
+        /* Adjust Glows for Light Mode */
+        --primary-glow: rgba(99, 102, 241, 0.2);
+        --secondary-glow: rgba(168, 85, 247, 0.2);
+        --header-scroll-bg: rgba(255, 255, 255, 0.85);
+    }
 }
 
 /* Base Reset & Styles */
@@ -164,7 +206,7 @@ header {
     max-width: 90%;
     margin: 0 auto;
     padding: 1rem 2rem;
-    background: rgba(15, 15, 18, 0.6);
+    background: var(--nav-bg);
     backdrop-filter: blur(16px);
     border-radius: 50px;
     border: 1px solid var(--glass-border);
@@ -344,7 +386,7 @@ header {
 
 .skill-tag {
     padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--tag-bg);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     font-size: 0.9rem;
@@ -467,15 +509,15 @@ header {
 }
 
 .gradient-1 {
-    background: linear-gradient(135deg, #1e1e24, #6366f1);
+    background: linear-gradient(135deg, var(--timeline-dot-bg), #6366f1);
 }
 
 .gradient-2 {
-    background: linear-gradient(135deg, #1e1e24, #a855f7);
+    background: linear-gradient(135deg, var(--timeline-dot-bg), #a855f7);
 }
 
 .gradient-3 {
-    background: linear-gradient(135deg, #1e1e24, #ec4899);
+    background: linear-gradient(135deg, var(--timeline-dot-bg), #ec4899);
 }
 
 .project-info {
@@ -503,7 +545,7 @@ header {
     font-size: 0.75rem;
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--tag-bg);
     color: var(--text-muted);
 }
 
@@ -536,7 +578,7 @@ header {
     flex: 1;
     border-right: 1px solid var(--glass-border);
     padding: 4rem;
-    background: rgba(255, 255, 255, 0.01);
+    background: var(--contact-info-bg);
 }
 
 .contact-form {
@@ -597,10 +639,10 @@ header {
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--input-bg);
     border: 1px solid var(--glass-border);
     border-radius: 10px;
-    color: white;
+    color: var(--input-text);
     font-family: var(--font-body);
     font-size: 1rem;
     outline: none;
@@ -610,7 +652,7 @@ header {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--primary);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--input-bg-focus);
 }
 
 /* Footer */
@@ -823,4 +865,12 @@ footer {
         align-items: center;
         text-align: center;
     }
+}
+
+
+/* Header Scrolled State */
+header.scrolled {
+    background: var(--header-scroll-bg);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
