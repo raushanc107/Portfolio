@@ -50,19 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.right = '2rem';
-                navLinks.style.background = 'rgba(15, 15, 18, 0.95)';
-                navLinks.style.padding = '2rem';
-                navLinks.style.borderRadius = '20px';
-                navLinks.style.border = '1px solid rgba(255,255,255,0.1)';
             } else {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
-                navLinks.style.display = ''; // Reset to CSS default
             }
         });
     }

@@ -27,6 +27,7 @@
     --timeline-dot-bg: #1e1e24;
     --input-text: #ffffff;
     --header-scroll-bg: rgba(15, 15, 18, 0.8);
+    --mobile-menu-bg: rgba(15, 15, 18, 0.95);
 
     /* Gradients */
     --gradient-main: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -74,6 +75,7 @@
         --primary-glow: rgba(99, 102, 241, 0.2);
         --secondary-glow: rgba(168, 85, 247, 0.2);
         --header-scroll-bg: rgba(255, 255, 255, 0.85);
+        --mobile-menu-bg: rgba(255, 255, 255, 0.95);
     }
 }
 
@@ -762,6 +764,19 @@ footer {
         display: none;
     }
 
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 2rem;
+        background: var(--mobile-menu-bg);
+        padding: 2rem;
+        border-radius: 20px;
+        border: 1px solid var(--glass-border);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -780,9 +795,14 @@ footer {
     display: flex;
     overflow-x: auto;
     gap: 2rem;
-    padding: 1rem 0 3rem 0;
+    padding: 2rem 2rem 4rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
     /* Extra bottom padding for hover effects */
     scroll-snap-type: x mandatory;
+    scroll-padding-left: 2rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
     scrollbar-width: thin;
     /* Firefox */
     scrollbar-color: var(--primary) transparent;
@@ -870,7 +890,14 @@ footer {
 
 /* Header Scrolled State */
 header.scrolled {
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+}
+
+header.scrolled .glass-nav {
     background: var(--header-scroll-bg);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* Elevation */
+    border-color: var(--glass-highlight);
 }
