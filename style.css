@@ -38,7 +38,7 @@
     --font-body: 'Inter', sans-serif;
 
     /* Spacing */
-    --section-padding: 6rem 2rem;
+    --section-padding: 4rem 2rem;
     --container-max-width: 1200px;
 
     /* Transition */
@@ -811,7 +811,7 @@ footer {
     }
 
     .section-padding {
-        padding: 4rem 1.5rem;
+        padding: 3rem 1.5rem;
     }
 
     .projects-grid {
