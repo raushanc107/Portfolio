@@ -254,7 +254,7 @@ header {
     position: relative;
     padding: 0 10%;
     gap: 4rem;
-    padding-top: 150px;
+    padding-top: 120px;
     /* Increased to prevent header overlap */
 }
 
@@ -542,6 +542,10 @@ header {
     margin-bottom: 1.5rem;
 }
 
+.read-more-btn {
+    display: none;
+}
+
 .tags span {
     font-size: 0.75rem;
     padding: 0.3rem 0.8rem;
@@ -711,7 +715,7 @@ footer {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 150px;
+        padding-top: 120px;
         /* Keep consistent with desktop change */
         /* padding-bottom: 5rem; */
         /* Prevent overlap with next section */
@@ -831,8 +835,52 @@ footer {
         top: auto !important;
     }
 
-    .card-2 {
-        display: none;
+    .project-info p,
+    .hero-description,
+    .about-text p,
+    .timeline-content p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        margin-bottom: 0;
+        /* Reduced from 1.5rem to bring button closer */
+    }
+
+    .project-info p.expanded,
+    .hero-description.expanded,
+    .about-text p.expanded,
+    .timeline-content p.expanded {
+        -webkit-line-clamp: unset;
+        overflow: visible;
+    }
+
+    .read-more-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        margin-top: 0.2rem;
+        margin-bottom: 1rem;
+        background: rgba(99, 102, 241, 0.1);
+        /* Primary low opacity */
+        border: 1px solid rgba(99, 102, 241, 0.2);
+        color: var(--primary);
+        font-family: var(--font-body);
+        font-size: 0.8rem;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(4px);
+    }
+
+    .read-more-btn:hover {
+        background: var(--primary);
+        color: white;
+        box-shadow: 0 4px 12px var(--primary-glow);
+        transform: translateY(-2px);
     }
 
     .hero-visual {
