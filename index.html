@@ -13,7 +13,7 @@
 
     <!-- Open Graph / LinkedIn / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://raushanc107.github.io/">
+    <meta property="og:url" content="https://raushanc107.github.io/Portfolio/">
     <meta property="og:title" content="Raushan Chaudhary | Sr. Software Engineer">
     <meta property="og:description" content="Explore the portfolio of a .NET & Azure expert building next-gen apps.">
     <meta property="og:image" content="profile.png">
@@ -30,6 +30,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Raushan Chaudhary",
+      "jobTitle": "Sr. Software Engineer",
+      "url": "https://raushanc107.github.io/Portfolio/",
+      "image": "https://raushanc107.github.io/Portfolio/profile.png",
+      "sameAs": [
+        "https://github.com/raushanc107",
+        "https://www.linkedin.com/in/raushan-chaudhary-35a405162"
+      ],
+      "alumniOf": "Chandigarh University",
+      "knowsAbout": ["C#", ".NET Core", "Azure", "Angular", "Software Architecture"]
+    }
+    </script>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://raushanc107.github.io/Portfolio/">
 </head>
 <body>
     <div class="background-glow"></div>
@@ -44,10 +64,10 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#awards">Accomplishments</a></li>
+                <li><a href="#awards">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="menu-toggle">
+            <div class="menu-toggle" role="button" aria-label="Toggle Navigation" tabindex="0">
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
@@ -248,7 +268,7 @@
                     <span class="subtitle">My Portfolio</span>
                     <h2>Featured Projects</h2>
                 </div>
-                <div class="horizontal-scroll-grid">
+                <div class="projects-grid">
                     <!-- Project 0: AiMasterClass -->
                     <div class="project-card glass fade-in-up">
 
@@ -376,7 +396,7 @@
             </div>
         </section>
 
-        <!-- Accomplishments Section -->
+        <!-- Achievements Section -->
         <section id="awards" class="section-padding">
             <div class="container">
                 <div class="section-header fade-in">
@@ -421,12 +441,12 @@
                         <p>Feel free to reach out for collaborations or just a friendly hello. Open to opportunities.</p>
                         <div class="info-item">
                             <i class="fas fa-envelope"></i>
-                            <span>raushanc107@icloud.com</span>
+                            <span>raushanc107@gmail.com</span>
                         </div>
 
                         <div class="social-links">
-                            <a href="https://github.com/raushanc107" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/raushan-chaudhary-35a405162" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/raushanc107" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/raushan-chaudhary-35a405162" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="contact-form" style="display: flex; flex-direction: column; justify-content: center; align-items: start;">

@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in');
     animatedElements.forEach(el => observer.observe(el));
 
+    // Mobile Menu Toggle Variables
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -29,18 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 // Close mobile menu if open
-                const navLinks = document.querySelector('.nav-links');
                 if (navLinks.classList.contains('active')) {
                     navLinks.classList.remove('active');
+
+                    // Reset icon
+                    if (menuToggle) {
+                        const icon = menuToggle.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    }
                 }
             }
         });
     });
 
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
+    // Mobile Menu Toggle Logic
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
@@ -48,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Toggle icon
             const icon = menuToggle.querySelector('i');
             if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
+                icon.classList.remove('fa-bars'); // Corrected order to matches original logic intent (if active, show X)
                 icon.classList.add('fa-times');
             } else {
                 icon.classList.remove('fa-times');
