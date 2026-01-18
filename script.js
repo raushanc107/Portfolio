@@ -99,4 +99,72 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     updateExperience();
+
+    // Mobile Read More Logic (Projects, About, Experience, Hero)
+    function initReadMore() {
+        if (window.innerWidth > 768) {
+            document.querySelectorAll('.read-more-btn').forEach(btn => btn.remove());
+            document.querySelectorAll('.expanded').forEach(el => el.classList.remove('expanded'));
+            return;
+        }
+
+        // Targets: Project Cards, Hero Description, About Text, Timeline Items
+        const containers = [
+            ...document.querySelectorAll('.project-info'),
+            ...document.querySelectorAll('.timeline-content')
+        ];
+
+        // Single elements and specialized lists
+        const heroDesc = document.querySelector('.hero-description');
+        const aboutParagraphs = document.querySelectorAll('.about-text p');
+
+        const targets = [];
+
+        // Add paragraphs from containers
+        containers.forEach(c => {
+            const p = c.querySelector('p');
+            if (p) targets.push(p);
+        });
+
+        // Add Hero
+        if (heroDesc) targets.push(heroDesc);
+
+        // Add About Paragraphs
+        if (aboutParagraphs) targets.push(...aboutParagraphs);
+
+        targets.forEach(p => {
+            if (!p) return;
+
+            // Check if button already exists (relative to parent or sibling check)
+            if (p.nextSibling && p.nextSibling.className === 'read-more-btn') return;
+
+            // Only add if content overflows
+            if (p.scrollHeight <= p.clientHeight + 2) return;
+
+            const btn = document.createElement('button');
+            btn.className = 'read-more-btn';
+            btn.innerText = 'Read More';
+
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                p.classList.toggle('expanded');
+                if (p.classList.contains('expanded')) {
+                    btn.innerText = 'Show Less';
+                } else {
+                    btn.innerText = 'Read More';
+                }
+            });
+
+            // Insert after paragraph
+            p.parentNode.insertBefore(btn, p.nextSibling);
+        });
+    }
+
+    // Run with delay to ensure rendering
+    setTimeout(initReadMore, 100);
+
+    // Re-run on resize just in case
+    window.addEventListener('resize', () => {
+        initReadMore();
+    });
 });
